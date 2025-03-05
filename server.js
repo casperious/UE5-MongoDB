@@ -37,14 +37,13 @@ const DataSchema = new mongoose.Schema({
 const DataModel = mongoose.model("Data", DataSchema);
 
 // API Route for UE5 to Send Data
-app.post("/data", async (req, res) => {
+app.post('/api/data', async (req, res) => {
     try {
-        const { taskID, startTime, endTime, steps, gaitSpeed } = req.body;
-        const newData = new DataModel({ taskID, startTime, endTime, steps, gaitSpeed });
+        const newData = new DataModel(req.body);
         await newData.save();
-        res.status(201).json({ message: "Data saved", data: newData });
-    } catch (err) {
-        res.status(500).json({ message: "Server error", error: err });
+        res.status(201).json({ message: 'Data saved successfully', data: newData });
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to save data' });
     }
 });
 app.get('/', (req, res) => {
