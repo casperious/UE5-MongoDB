@@ -47,6 +47,13 @@ app.post("/data", async (req, res) => {
         res.status(500).json({ message: "Server error", error: err });
     }
 });
+app.get('/', (req, res) => {
+    res.send('Server is running!');
+});
 
+// Example API route (optional)
+app.get('/api/test', (req, res) => {
+    res.json({ message: 'API is working!' });
+});
 // Start Server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
