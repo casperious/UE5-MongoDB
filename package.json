@@ -1,31 +1,17 @@
 {
-  "name": "mongoserver",
+  "name": "ue5-mongodb-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Server to store UE5 data in MongoDB Atlas",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "build": "npm install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/casperious/UE5-MongoDB.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/casperious/UE5-MongoDB/issues"
-  },
-  "homepage": "https://github.com/casperious/UE5-MongoDB#readme",
-  "description": "",
   "dependencies": {
-    "body-parser": "^1.20.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "mongodb": "^6.14.2",
-    "mongoose": "^8.12.1"
-  },
-  "devDependencies": {
-    "eslint": "^9.21.0"
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3"
   }
 }
