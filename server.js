@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-MONGO_URI = "mongodb+srv://jvarghese2:test123*@cluster0.3hswi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+MONGO_URI = "mongodb+srv://jvarghese2:z9bZ0spdvsnUTv7y@cluster0.3hswi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 PORT = 5000;
 
 // Initialize Express
