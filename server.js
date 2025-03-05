@@ -1,12 +1,15 @@
-require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
+MONGO_URI = "mongodb+srv://jvarghese2:Jv93109!1234@cluster0.3hswi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+PORT = 5000;
+
 // Initialize Express
 const app = express();
-const PORT = process.env.PORT || 5000;
+//const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
@@ -14,7 +17,7 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB Atlas
 mongoose
-    .connect(process.env.MONGO_URI, {
+    .connect(MONGO_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
