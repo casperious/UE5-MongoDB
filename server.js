@@ -26,10 +26,17 @@ mongoose
 
 // Define Schema
 const DataSchema = new mongoose.Schema({
-    taskID: String,
+    userID: String,
     startTime: Number,
     endTime: Number,
     steps: Number,
+    squats: Number,
+    crouches: Number,
+    bends: Number,
+    timeTask1: Number,
+    timeTask2: Number,
+    timeTask3: Number,
+    timeTask4: Number,
     gaitSpeed: Number,
     timestamp: { type: Date, default: Date.now },
 });
