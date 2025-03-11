@@ -38,6 +38,10 @@ const DataSchema = new mongoose.Schema({
     timeTask3: Number,
     timeTask4: Number,
     gaitSpeed: Number,
+    numDoneTask1: Number,
+    numDoneTask2: Number,
+    numDoneTask3: Number,
+    numDoneTask4: Number,
     timestamp: { type: Date, default: Date.now },
 });
 
