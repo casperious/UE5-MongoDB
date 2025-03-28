@@ -42,6 +42,7 @@ const DataSchema = new mongoose.Schema({
     numDoneTask2: Number,
     numDoneTask3: Number,
     numDoneTask4: Number,
+    difficulty: String,
     timestamp: { type: Date, default: Date.now },
 });
 
